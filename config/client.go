@@ -70,7 +70,7 @@ func (cfg *ClientConfig) ToArgs() ([]string, error) {
 	args = AppendKeyVal(args, "--parallel", cfg.ParallelFlows) // to be determined
 	args = AppendKeyVal(args, "--rsa-public-key-path", cfg.RSAPubKeyFile)
 	args = AppendKey(args, "--reverse", true)
-	args = AppendKeyVal(args, "--bitrate", cfg.TargetBitrate)
+	args = AppendKeyVal(args, "--bandwidth", cfg.TargetBitrate)
 	args = AppendKeyVal(args, "--title", cfg.Title)
 	args = AppendKeyVal(args, "--tos", cfg.ToS)
 	args = AppendKey(args, "--udp", cfg.UDP)
