@@ -1,7 +1,7 @@
 package cmd
 
 import (
-	"github.com/mami-project/trafic/runner"
+	"github.com/5GinFIRE/trafic/runner"
 	"github.com/spf13/cobra"
 )
 

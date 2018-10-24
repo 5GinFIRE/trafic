@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/mami-project/trafic/config"
+	"github.com/5GinFIRE/trafic/config"
 )
 
 type Runner struct {

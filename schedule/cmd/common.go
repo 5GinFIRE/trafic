@@ -14,9 +14,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/mami-project/trafic/config"
-	"github.com/mami-project/trafic/cruncher"
-	"github.com/mami-project/trafic/runner"
+	"github.com/5GinFIRE/trafic/config"
+	"github.com/5GinFIRE/trafic/cruncher"
+	"github.com/5GinFIRE/trafic/runner"
 	"github.com/spf13/viper"
 )
 

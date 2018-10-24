@@ -29,7 +29,7 @@ And check `docker/etc/scripts` for examples
 
 ### Iperf3
 
-Fetch the latest release (>= 3.5) from [here](https://github.com/esnet/iperf/releases)
+Fetch release 3.1.3 from [here](https://github.com/esnet/iperf/releases)
 
 ### Docker
 

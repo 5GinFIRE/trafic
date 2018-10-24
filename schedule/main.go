@@ -1,6 +1,6 @@
 package main
 
-import "github.com/mami-project/trafic/schedule/cmd"
+import "github.com/5GinFIRE/trafic/schedule/cmd"
 
 func main() {
 	cmd.Execute()

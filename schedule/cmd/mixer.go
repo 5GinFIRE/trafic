@@ -3,7 +3,7 @@ package cmd
 import (
 	"log"
 
-	"github.com/mami-project/trafic/mixer"
+	"github.com/5GinFIRE/trafic/mixer"
 	"github.com/spf13/cobra"
 )
 
