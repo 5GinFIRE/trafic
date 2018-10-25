@@ -5,21 +5,23 @@ import (
 )
 
 // ClientConfig implements the Configurer interface for an iperf3 client
+//Commented options are not supported by iperf 3.1.3
+
 type ClientConfig struct {
 	BufSize          string `yaml:"length"`
 	ClientPort       uint16 `yaml:"cport"`
 	CongestionCtrl   string `yaml:"congestion-ctrl"`
-	ConnectTimeout   uint64 `yaml:"connect-timeout-ms"`
-	DSCP             string `yaml:"dscp"`
+	//ConnectTimeout   uint64 `yaml:"connect-timeout-ms"`
+	//DSCP             string `yaml:"dscp"`
 	DisableNagle     bool   `yaml:"no-delay"`
 	FlowBytes        string `yaml:"bytes"`
 	FlowDuration     uint64 `yaml:"time-s"`
 	FlowPackets      string `yaml:"blockcount"`
-	FQRate           string `yaml:"fq-rate"`
+	//FQRate           string `yaml:"fq-rate"`
 	GetServerOutput  bool   `yaml:"get-server-output"`
 	MSS              uint   `yaml:"set-mss"`
 	OmitLeadingSecs  uint   `yaml:"omit-s"`
-	PacingTimer      string `yaml:"pacing-timer-ms"`
+	//PacingTimer      string `yaml:"pacing-timer-ms"`
 	ParallelFlows    uint   `yaml:"parallel"`
 	RSAPubKeyFile    string `yaml:"rsa-public-key-path"`
 	ReverseDir       bool   `yaml:"reverse"`
@@ -56,17 +58,17 @@ func (cfg *ClientConfig) ToArgs() ([]string, error) {
 	args = AppendKeyVal(args, "--length", cfg.BufSize)
 	args = AppendKeyVal(args, "--cport", cfg.ClientPort)
 	args = AppendKeyVal(args, "--congestion", cfg.CongestionCtrl)
-	args = AppendKeyVal(args, "--connect-timeout", cfg.ConnectTimeout)
-	args = AppendKeyVal(args, "--dscp", cfg.DSCP)
+	//args = AppendKeyVal(args, "--connect-timeout", cfg.ConnectTimeout)
+	//args = AppendKeyVal(args, "--dscp", cfg.DSCP)
 	args = AppendKey(args, "--no-delay", cfg.DisableNagle)
 	args = AppendKeyVal(args, "--bytes", cfg.FlowBytes)
 	args = AppendKeyVal(args, "--time", cfg.FlowDuration)
 	args = AppendKeyVal(args, "--blockcount", cfg.FlowPackets)
-	args = AppendKeyVal(args, "--fq-rate", cfg.FQRate)
+	//args = AppendKeyVal(args, "--fq-rate", cfg.FQRate)
 	args = AppendKey(args, "--get-server-output", true)
 	args = AppendKeyVal(args, "--set-mss", cfg.MSS)
 	args = AppendKeyVal(args, "--omit", cfg.OmitLeadingSecs)
-	args = AppendKeyVal(args, "--pacing-timer", cfg.PacingTimer)
+	//args = AppendKeyVal(args, "--pacing-timer", cfg.PacingTimer)
 	args = AppendKeyVal(args, "--parallel", cfg.ParallelFlows) // to be determined
 	args = AppendKeyVal(args, "--rsa-public-key-path", cfg.RSAPubKeyFile)
 	args = AppendKey(args, "--reverse", true)
