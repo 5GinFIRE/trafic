@@ -69,12 +69,6 @@ format: k
 # emit debugging output
 #debug: false
 
-# timeout for control connection setup (ms)
-#connect-timeout-ms: 1000
-
-# set the timing for pacing, in microseconds (default 1000)
-#pacing-timer-ms: 1000
-
 # length of buffer to read or write
 # (default 128 KB for TCP, dynamic or 1460 for UDP)
 # [KMG]
@@ -98,11 +92,6 @@ format: k
 
 # only use IPv6
 #version6: true
-
-# set the IP dscp value, either 0-63 or symbolic
-# Numeric values can be specified in decimal,
-# octal and hex (see tos above).
-#dscp: af12
 
 # use a 'zero copy' method of sending data
 #zerocopy: false

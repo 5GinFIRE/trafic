@@ -13,9 +13,6 @@ json: true
 # send output to a log file
 logfile: /tmp/iperf3-server.log
 
-# force flushing output at every interval
-#forceflush: false
-
 # run the server as a daemon
 # XXX should be always false and readonly: we want the test scheduler to be in
 # complete control

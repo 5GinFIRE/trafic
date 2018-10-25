@@ -6,7 +6,7 @@ type CommonConfig struct {
 	BindInterface  string  `yaml:"bind"`
 	Debug          bool    `yaml:"debug"`
 	ExchangedFile  string  `yaml:"file"`
-	ForceFlush     bool    `yaml:"forceflush"`
+	//ForceFlush     bool    `yaml:"forceflush"`
 	JSON           bool    `yaml:"json"`
 	LogFile        string  `yaml:"logfile"`
 	ReportFormat   string  `yaml:"format"`
@@ -21,6 +21,7 @@ type CommonConfig struct {
 // - logfile	suppressed
 // - format		suppressed
 // - verbose	suppressed
+// - forceflush not supported by iperf 3.1.3
 
 func (cfg *CommonConfig) ToArgs(args []string) ([]string, error) {
 	cargs := []string{"--json"}
@@ -28,7 +29,7 @@ func (cfg *CommonConfig) ToArgs(args []string) ([]string, error) {
 	cargs = AppendKeyVal(cargs, "--bind", cfg.BindInterface)
 	//	args = AppendKey(cargs, "--debug", cfg.Debug)
 	cargs = AppendKeyVal(cargs, "--file", cfg.ExchangedFile)
-	cargs = AppendKey(cargs, "--forceflush", cfg.ForceFlush)
+	//cargs = AppendKey(cargs, "--forceflush", cfg.ForceFlush)
 	//	args = AppendKey(cargs, "--json", cfg.JSON)
 	//	args = AppendKeyVal(cargs, "--logfile", cfg.LogFile)
 	//	args = AppendKeyVal(cargs, "--format", cfg.ReportFormat)
