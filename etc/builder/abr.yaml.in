@@ -1,0 +1,27 @@
+label: &l {{ label }}
+
+port: &p {{ port }}
+
+instances: &i 1
+
+client:
+  at:
+    - 0s
+    - 10s
+    - 20s
+    - 30s
+    - 40s
+    - 50s
+  config:
+    server-address: {{ server }}
+    server-port: *p
+    title: *l
+    bytes: 1.8M
+    report-interval-s: 0.2
+
+server:
+  at:
+    - 0s
+  config:
+    server-port: *p
+    report-interval-s: 0.2

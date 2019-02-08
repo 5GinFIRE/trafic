@@ -1,0 +1,26 @@
+label: &l {{ label }}
+
+port: &p {{ port }}
+
+instances: &i 1
+
+client:
+  at:
+    - 0.2s
+    
+  config:
+    server-address: {{ server }}
+    server-port: *p
+    udp: true
+    length: 126
+    target-bitrate: {{ bandwidth }}
+    title: *l
+    report-interval-s: 0.2
+    parallel: *i
+
+server:
+  at:
+    - 0s
+  config:
+    server-port: *p
+    report-interval-s: 0.2
