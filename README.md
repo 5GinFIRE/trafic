@@ -43,6 +43,11 @@ If you clones this repository directly, i.e. not using `go get`
 go install ./...
 ```
 
+If any dependency is still missing, run the following command to retrieve them:
+
+```
+go get -t -u ./...
+
 ---
 
 [Trafic](https://en.wikipedia.org/wiki/Trafic) is not a typo, it's a film by [Jacques Tati](https://en.wikipedia.org/wiki/Jacques_Tati).
