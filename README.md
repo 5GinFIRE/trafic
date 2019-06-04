@@ -47,6 +47,7 @@ If any dependency is still missing, run the following command to retrieve them:
 
 ```
 go get -t -u ./...
+```
 
 ---
 
